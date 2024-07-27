@@ -2,6 +2,11 @@
 
 This is a donation management application built with Ruby on Rails for the backend and React for the frontend. The application allows users to add and view donations. The primary focus is on core functionalities rather than design.
 
+
+## Live Demo
+
+Check out the live application [here](https://donation-i1kx.onrender.com).
+
 ## Features
 
 - Add new donations.
