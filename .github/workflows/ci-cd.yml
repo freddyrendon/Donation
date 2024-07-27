@@ -1,0 +1,60 @@
+# name: CI/CD Pipeline
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+
+#       - name: Set up Ruby
+#         uses: ruby/setup-ruby@v1
+#         with:
+#           ruby-version: 3.0.0
+
+#       - name: Install dependencies
+#         run: |
+#           gem install bundler -v '2.3.14'
+#           bundle install
+#         working-directory: backend # Update this to the correct path where your Gemfile is located
+#         # testing
+
+
+#       - name: Run Rails tests
+#         run: bundle exec rspec
+#         working-directory: backend # Update this to the correct path where your rspec is located
+
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
+
+#       - name: Install frontend dependencies
+#         run: npm install
+#         working-directory: frontend
+
+#       - name: Run React tests
+#         run: npm test -- --watchAll=false
+#         working-directory: frontend
+
+#       - name: Build frontend
+#         run: npm run build
+#         working-directory: frontend
+
+#       - name: Deploy to Render
+#         run: |
+#           curl -X POST \
+#             -H "Authorization: Bearer rnd_3OwmNPYaz2c2AvQGXL7UHPIyDoKV" \
+#             -H "Content-Type: application/json" \
+#             --url 'https://api.render.com/v1/services?limit=3' \
+
